@@ -11,7 +11,7 @@ __description__
 
 __author__
 
-   xiongin <optimus1009@163.com>
+   xionglin <optimus1009@163.com>
 
 """
 
