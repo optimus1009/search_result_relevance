@@ -48,7 +48,7 @@ def softmax(score):
 ##########################
 ## Cutomized Objectives ##
 ##########################
-#### Implement the method described in the paper:
+
 # Ordinal Regression by Extended Binary Classification
 # Ling Li, Hsuan-Tien Lin
 def ebcObj(preds, dtrain):
@@ -87,7 +87,7 @@ def ebcObj(preds, dtrain):
         hess.shape = (M*N)
     return grad, hess
 
-#### Implement the method described in the paper:
+
 # Improving ranking performance with cost-sensitive ordinal classification via regression
 # Yu-Xun Ruan, Hsuan-Tien Lin, and Ming-Feng Tsai
 def cocrObj(preds, dtrain):
