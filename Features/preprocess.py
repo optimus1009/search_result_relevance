@@ -113,6 +113,10 @@ print("Done.")
 print("Save data...")
 
 ## processed_train_data_path = "%s/train.processed.csv.pkl
+## pickle.dump(obj, file[, protocol]) 
+## If the protocol parameter is omitted, protocol 0 is used. 
+## If protocol is specified as a negative value or HIGHEST_PROTOCOL, 
+## the highest protocol version will be used.
 with open(config.processed_train_data_path, "wb") as f:
     cPickle.dump(dfTrain, f, -1)
 with open(config.processed_test_data_path, "wb") as f:
