@@ -134,6 +134,8 @@ def extract_feat(df):
             for target_name in feat_names:
                 if target_name != obs_name:
                     ## query
+                    ## 两个特征之间的相同项 eg,query_gram = ['a','b','c','d','e','a','b'] 和
+                    ## title_gram = ['c','d','e','a','b'] 之间的相同项的数目 5 ['a','b','c','d','e']
                     df["count_of_%s_%s_in_%s"%(obs_name,gram,target_name)] = list(df.apply(lambda x: sum([1. for w in x[obs_name+"_"+gram] if w in set(x[target_name+"_"+gram])]), axis=1))
                     df["ratio_of_%s_%s_in_%s"%(obs_name,gram,target_name)] = map(try_divide, df["count_of_%s_%s_in_%s"%(obs_name,gram,target_name)], df["count_of_%s_%s"%(obs_name,gram)])
 
